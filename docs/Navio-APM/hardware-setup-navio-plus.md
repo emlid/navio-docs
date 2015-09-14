@@ -121,3 +121,12 @@ GPIO pins not connected to anything on Navio+:
 ###ADC pins
 
 Under the Navio+ you can find pads ADC2 and ADC3, they can be used as either pin 4 or 5 in APM. ADC range is 0-3.3V .
+
+###How to connect Airspeed sensor - MPVX7002DP to NAVIO
+
+On the bottom of NAVIO there are 4 pads. 
+Connect + to 3v3, GND to GND, and analog ouput of the sensor to ADC2.
+In mission planner set airspeed to Enabled, check "Use Airspeed", check "Analog PIN 4" and make preflight calibration.
+From now on, NAVIO+ will use IAS instead of Ground speed from GPS. You will also see a wind speed and direction in Mission Planner. 
+
+

@@ -7,11 +7,11 @@ Source code is available on [GitHub](http://github.com/emlid/ardupilot)
 
 Deb package contains APM binaries that are compatible with Navio, Navio Raw or Navio+:
 
-[apm.deb](http://files.emlid.com/data/public/apm)
+[apm.deb](http://files.emlid.com/apm/apm.deb)
 
 To download from Raspberry and install it run the following:
 
 ```
-wget 'http://files.emlid.com/data/public/apm?dl=true&file=/4853c55c17/apm.deb' -O apm.deb
+wget 'http://files.emlid.com/apm/apm.deb)' -O apm.deb
 sudo dpkg -i apm.deb
 ```

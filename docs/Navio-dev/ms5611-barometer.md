@@ -69,4 +69,4 @@ int main()
 
 ```
 
-More information about MS5611 is available in the [datasheet](http://files.emlid.com/data/public/ms5611-01ba03)
+More information about MS5611 is available in the [datasheet](http://files.emlid.com/MS5611-01BA03.pdf)

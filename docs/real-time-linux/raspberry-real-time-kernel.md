@@ -43,6 +43,6 @@ Patched and configured source code for Raspberry Pi real-time kernel:
 
 SD card image downloads:
 
-* [emlid-raspberrypi2-raspbian-rt-20150401.img.xz](http://files.emlid.com/data/public/rt-20150401)
+* [emlid-raspberrypi2-raspbian-rt-20150401.img](http://files.emlid.com/images/emlid-raspberrypi2-raspbian-rt-20150401.img)
 
 --

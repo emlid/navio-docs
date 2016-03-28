@@ -97,24 +97,21 @@ APM Planner listens on UDP port 14550, so it should catch telemetry from the dro
 
 **MAVProxy**
 
-MAVProxy is a console-oriented ground station software written in Python that can be used standalone or together with APM Planner. It’s well suited for advanced users and developers. MAVProxy can be installed with pip:
+MAVProxy is a console-oriented ground station software written in Python that can be used standalone or together with APM Planner. It’s well suited for advanced users and developers.  
 
-```bash
-pip install mavlink mavproxy console wp
-```
-
+To install MAVProxy use [Download and Installation](http://dronecode.github.io/MAVProxy/html/getting_started/download_and_installation.html) instructions.
 
 To run it specify the --master port, which can be serial, TCP or UDP. It also can perform data passthrough using --out option.
 
 ```bash
-<>mavproxy.py --master 192.168.1.2:14550 --console
+mavproxy.py --master 192.168.1.2:14550 --console
 ```
 
 Where 192.168.1.2 is the IP address of the GCS, not RPi.
 
 ####Skip board voltage check
 
-As Raspberry has no data about Navio board voltage, prearm check should be disabled as shown [here](http://copter.ardupilot.com/wiki/flying-arducopter/prearm_safety_check/). Pick "Skip Voltage".
+As Raspberry has no data about Navio board voltage, prearm check should be disabled as shown [here](http://ardupilot.org/copter/docs/prearm_safety_check.html). Pick "Skip Voltage".
 
 ####Voltage and current sensing
 
@@ -140,12 +137,10 @@ You should see voltage and current values. After that it works everytime.
 
 As other APM configuration procedures are very similar for most APM-running autopilot hardware, please use the APM documentation.
 
-*Important*: There is no need to perform "4. Load Copter Firmware" step as APM is installed using deb package or binary on RPi with Navio. Also, frame type is selected by running the corresdonding binary as described above.
+*Important*: There is no need to perform "Load Copter Firmware" step as APM is installed using deb package or binary on RPi with Navio. Also, frame type is selected by running the corresdonding binary as described above.
 
-[Hardware configuration](http://copter.ardupilot.com/wiki/initial-setup/configuring-hardware)
+[Hardware configuration](http://ardupilot.org/copter/docs/configuring-hardware.html)
 
-[ESC Calibration](http://copter.ardupilot.com/wiki/initial-setup/configuring-hardware)
+[ESC Calibration](http://ardupilot.org/copter/docs/esc-calibration.html)
 
-[Motor Setup](http://copter.ardupilot.com/wiki/initial-setup/configuring-hardware)
-
-[Enable RC Failsafe](http://copter.ardupilot.com/wiki/configuration/throttle-failsafe/)!
+[Enable RC Failsafe](http://ardupilot.org/copter/docs/radio-failsafe.html)!

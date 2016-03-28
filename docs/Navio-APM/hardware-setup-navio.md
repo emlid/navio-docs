@@ -43,7 +43,7 @@ Acceptable voltage level for Raspberry Pi is 4.75-5.25V, provided current should
 RC receiver's PPM output should be connected to 'PPM' pin on 2.54mm header. 'PPM' input accepts signal with 5V level.
 
 ####RC outputs
-RC outputs on 2.54mm header provide PWM values with 5V voltage level that can be used to control servos or motors. Functions that are designated to RC outputs can be found in APM [plane](http://plane.ardupilot.com/wiki/arduplane-setup/connecting-your-rc-gear/), [copter](http://copter.ardupilot.com/wiki/connecting-the-escs-and-motors/), [rover](http://rover.ardupilot.com/wiki/apmrover-setup/#APMRover_Setup) setup guides.
+RC outputs on 2.54mm header provide PWM values with 5V voltage level that can be used to control servos or motors. Functions that are designated to RC outputs can be found in APM [plane](http://ardupilot.org/plane/docs/arduplane-setup.html), [copter](http://ardupilot.org/copter/docs/initial-setup.html), [rover](http://ardupilot.org/rover/docs/apmrover-setup.html) setup guides.
 
 ####GNSS antenna
 GNSS antenna for Navio's onboard GNSS receiver should be connected to the u.fl socket labeled 'ANT'.
@@ -53,7 +53,6 @@ Radio modems that work over UART interface can be connected to the Navio's UART
 
 ####External compass
 MPU9250 sensor onboard of Navio contains magnetometer, but optionally it is possible to use external compass. There are a lot of HMC5883L breakout boards, but for such board to be compatible it is required that the board can be powered by 5V.
-[This one](https://store.3drobotics.com/products/hmc5883l-triple-axis-magnetometer) is compatible.
 
 ####External GPS
 Optionally it is possible to connect external GPS and compass, but not necessary as Navio already contains an onboard GNSS receiver and compass. As UART and I2C ports on Navio have the same pinouts as on Pixhawk it is possible to connect any Pixhawk-compatible GNSS modules with their provided wires, they usually have an external compass built-in which can be used too by connecting over I2C DF13 wire. Older modules such as ones for APM 2.5 could be used with proper wiring.

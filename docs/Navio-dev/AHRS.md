@@ -5,26 +5,34 @@ One of examples for Navio demonstrates the work of Mahony AHRS with the data fro
 ####Preparing your Mac
 Install [pip](https://pip.pypa.io/en/latest/installing.html) and use it to get required packages:
 
-```
+```bash
 sudo pip install PyOpenGL PyOpenGL_accelerate
 sudo pip install pyserial
 ```
 
 You might be asked to install command line developer tools along the way.
+
+#### Preparing your PC
+
+Install OpenGL
+```bash
+sudo apt-get install python-opengl
+```
+
 ####On PC\Mac
 Download [the archive with Navio utilities](https://github.com/emlid/Navio/archive/master.zip)
 Extract the archive, enter the directory with 3DIMU utility and run it:
 
-```
+```bash
 cd Navio/Utilities/3DIMU
 python 3Dimu.py
 ```
 ####On Raspberry Pi
-Clone Navio repository, navigate to the folder with AHRS example, compile and run it:
+Clone Navio repository using the following [instructions](navio-repository-cloning/).
+Navigate to the folder with AHRS example, compile and run it:
 
-```
-git clone https://github.com/emlid/Navio.git
-cd Navio/C++/Examples/AHRS
+```bash
+cd C++/Examples/AHRS
 make
 ./AHRS X.X.X.X 7000
 ```

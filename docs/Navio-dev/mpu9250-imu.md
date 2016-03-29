@@ -1,99 +1,38 @@
+**MPU9250**  
 
-####MPU9250
 MPU9250 is one of the best in class inertial sensors, which combines a gyroscope, an accelerometer and a magnetometer in one device. MPU sensor family is not only popular as a part of drone autopilot projects, but is also widely used in devices like cellphones, tablets, etc.
 
-####IMU example
-If you haven't already done that, download Navio drivers and examples code like this:
+**IMU example**  
+
+If you haven't already done that, download Navio drivers and examples code [here](navio-repository-cloning/).
+
+***C++***  
+Move to the folder with the source code, compile and run the example:
 
 ```bash
-git clone https://github.com/emlid/Navio
-```
-
-Move to folder Navio/Examples/AccelGyroMag, compile and run the example
-
-```
-cd Navio/C++/Examples/AccelGyroMag
-make 
+cd C++/Examples/AccelGyroMag
+make
 ./AccelGyroMag
 ```
 
-You should immediately see 9 values, updated in real time. Try to move the device around and see them change. They include Accelerometer, Gyroscope and Magnetometer data, three axis each.
-####MPU9250 driver
-Let's see the example code:
-
-```c
-#include "Navio/MPU9250.h"
-
-int main()
-{
-   MPU9250 imu;
-   imu.initialize();
-
-   float ax, ay, az, gx, gy, gz, mx, my, mz;
-
-   while(1) {
-      imu.getMotion9(&ax, &ay, &az, &gx, &gy, &gz, &mx, &my, &mz);
-      
-      printf("Acc: %+05.3f %+05.3f %+05.3f ", ax, ay, az);
-      printf("Gyr: %+05.3f %+05.3f %+05.3f ", gx, gy, gz);
-      printf("Mag: %+05.3f %+05.3f %+05.3fn", mx, my, mz);
-
-      sleep(0.5);
-   }
-}
+***Python***  
+Move to the folder with the source code, compile and run the example:
+```bash
+cd Python/AccelGyroMag
+python AccelGyroMag.py
 ```
 
-The first thing we should pay attention to is the line ***imu.initialize()***, as it does an important job of setting internal device parameters:
+You should immediately see 9 values, updated in real time. Try to move the device around and see them change. They include Accelerometer, Gyroscope and Magnetometer data, three axis each.  
+```bash
+Acc:  +0.014  +0.139  +9.974  Gyr:   -0.042   +0.022   +0.011  Mag: -3525.450 +29.584  +0.000
+Acc:  -0.010  +0.268 +10.036  Gyr:   -0.042   +0.019   +0.015  Mag: -14.963 +43.390 -50.130
+Acc:  -0.010  +0.278  +9.888  Gyr:   -0.043   +0.021   +0.012  Mag: -16.566 +42.852 -50.302
+Acc:  +0.010  +0.187 +10.041  Gyr:   -0.039   +0.021   +0.011  Mag: -14.963 +42.314 -50.817
+Acc:  -0.062  +0.158  +9.855  Gyr:   -0.039   +0.020   +0.011  Mag: -15.497 +42.493 -49.959
+Acc:  -0.067  +0.196 +10.056  Gyr:   -0.044   +0.020   +0.013  Mag: -14.963 +43.748 -50.130
+```  
 
-```c
-bool MPU9250::initialize(int sample_rate_div, int low_pass_filter)
-{
-    uint8_t i = 0;
-    uint8_t MPU_Init_Data[MPU_InitRegNum][2] = {
-        //{0x80, MPUREG_PWR_MGMT_1},     // Reset Device - Disabled because it seems to corrupt initialisation of AK8963
-        {0x01, MPUREG_PWR_MGMT_1},     // Clock Source
-        {0x00, MPUREG_PWR_MGMT_2},     // Enable Acc &amp; Gyro
-        {low_pass_filter, MPUREG_CONFIG},  // Use DLPF set Gyroscope bandwidth 184Hz, temperature bandwidth     188Hz
-        {0x18, MPUREG_GYRO_CONFIG},    // +-2000dps
-        {0x08, MPUREG_ACCEL_CONFIG},   // +-4G
-        {0x09, MPUREG_ACCEL_CONFIG_2}, // Set Acc Data Rates, Enable Acc LPF , Bandwidth 184Hz
-        {0x30, MPUREG_INT_PIN_CFG},    //
-        //{0x40, MPUREG_I2C_MST_CTRL},   // I2C Speed 348 kHz
-        //{0x20, MPUREG_USER_CTRL},      // Enable AUX
-        {0x20, MPUREG_USER_CTRL},       // I2C Master mode
-        {0x0D, MPUREG_I2C_MST_CTRL}, //  I2C configuration multi-master  IIC 400KHz
-        {AK8963_I2C_ADDR, MPUREG_I2C_SLV0_ADDR},  //Set the I2C slave address of AK8963 and set for write.
-        //{0x09, MPUREG_I2C_SLV4_CTRL},
-        //{0x81, MPUREG_I2C_MST_DELAY_CTRL}, //Enable I2C delay
-        {AK8963_CNTL2, MPUREG_I2C_SLV0_REG}, //I2C slave 0 register address from where to begin data transfer
-        {0x01, MPUREG_I2C_SLV0_DO}, // Reset AK8963
-        {0x81, MPUREG_I2C_SLV0_CTRL},  //Enable I2C and set 1 byte
-        {AK8963_CNTL1, MPUREG_I2C_SLV0_REG}, //I2C slave 0 register address from where to begin data transfer
-        {0x12, MPUREG_I2C_SLV0_DO}, // Register value to continuous measurement in 16bit
-        {0x81, MPUREG_I2C_SLV0_CTRL}  //Enable I2C and set 1 byte
-    };
-
-for(i=0; i &lt; MPU_InitRegNum; i++) {
-WriteReg(MPU_Init_Data[i][1], MPU_Init_Data[i][0]);
-usleep(100000); //I2C must slow down the write speed, otherwise it would not work
-}
-
-set_acc_scale(BITS_FS_16G);
-set_gyro_scale(BITS_FS_2000DPS);
-
-calib_mag();
-return 0;
-}
-
-```
-
-Note that this function also sets scales for both Accelerometer and Gyroscope:
-
-```c
-{0x18, MPUREG_GYRO_CONFIG},    // +-2000dps
-{0x08, MPUREG_ACCEL_CONFIG},   // +-4G
-```
-
+For further information see source code. The first thing we should pay attention to is the line ```imu.initialize()```, as it does an important job of setting internal device parameters. Note that this function also sets scales for both Accelerometer and Gyroscope. The function is defined in ```C++/Navio/MPU9250.cpp```.  
 The main function loop is pretty straightforward: read the data, print the data.
 
-You can find additional information about MPU9250 in the datasheet.
+You can find additional information about the chips in [MPU-9250 datasheet](http://store.invensense.com/datasheets/invensense/MPU9250REV1.0.pdf).

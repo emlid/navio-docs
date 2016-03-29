@@ -1,9 +1,9 @@
-#### PPM
+**PPM**
 
 ![ppm](http://www.emlid.com/wp-content/uploads/2014/07/PWM2PPM-e1413989507460.png)
 To be used in autopilot applications Navio needs to decode RC input. Measuring each PWM channel requires multiple connectors and plenty of wires. PPM sum signal combines all PWMs from the receiver in one sequence, which could be transferred over single wire.
 
-Most modern receivers output PPM, but if you have an older RC gear with only PWM output an [encoder](https://store.3drobotics.com/products/ppm-encoder)  can be used. For the S.Bus receivers we are preparing a separate driver, however a [S.Bus to PPM](http://www.frsky-rc.com/product/pro.php?pro_id=112)  converter exists.
+Most modern receivers output PPM, but if you have an older RC gear with only PWM output an encoder can be used. For the S.Bus receivers we are preparing a separate driver, however a [S.Bus to PPM](http://www.frsky-rc.com/product/pro.php?pro_id=112)  converter exists.
 
 In case you want to run the code on Raspberry Pi without Navio please note, GPIOs on Raspberry Pi are not 5V tolerant. A divider is required to lower the voltage of the signal. Navio has a built-in voltage divider in PPM Input that lowers the voltage level from 5V to 3.3V. If you connect a 3.3V PPM device (which is rare) to Navio PPM will not be detected. Navio+ has a logic level converter and you can connect both 3.3V and 5V PPM. 
 
@@ -14,17 +14,14 @@ The acquired PWM values can be used in an application or transferred to the Navi
 
 <iframe src="//www.youtube.com/embed/62C0-LsyrZE?rel=0" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
-####PPM input example
-Example code is available in our GitHub repository, if you haven't previously downloaded it, do:
+**PPM input example**
 
-```bash
-git clone github.com/emlid/Navio.git
-```
+Example code is available in our GitHub repository, if you haven't previously downloaded it, visit [Navio examples setup page](navio-repository-cloning/).
 
 To compile and and run the example navigate to the directory with it, then run make and execute the compiled binary:
 
 ```bash
-cd Navio/C++/Examples/PPM-decoder
+cd C++/Examples/PPM-decoder
 make
 sudo ./PPM
 ```

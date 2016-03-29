@@ -15,6 +15,7 @@ pages:
   - 'Real-time Linux for RPi2' : 'Downloads/Real-time-Linux-RPi2.md'
   - 'APM binaries': 'Downloads/APM-binaries.md'
 - Navio for developers:
+  - 'Navio examples setup': 'Navio-dev/navio-repository-cloning.md'
   - '9DOF IMU': 'Navio-dev/mpu9250-imu.md'
   - 'AHRS' : 'Navio-dev/AHRS.md'
   - 'Barometer' : 'Navio-dev/ms5611-barometer.md'

@@ -22,8 +22,8 @@ make
 
 Move to the folder with the code and run the example:
 ```bash
-cd Python/GPS
-python u-blox.py
+cd Python
+python GPS.py
 ```
 
 After you run the code, you will start seeing messages with current location data. Note that it takes some time for the receiver to get it's position and at first you will see zero value of latitude, longitude and height. iTOW parameter will change every second. This example starts an infinite loop, so when you are done, just stop the process with **CTRL+C**.

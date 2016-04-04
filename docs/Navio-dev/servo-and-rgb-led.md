@@ -33,7 +33,7 @@ In this example channels values for RGB LED are slowly decreased and increased c
 Move to the folder with the code and run the example
 
 ```bash
-cd Python/LED
+cd Python
 sudo python LED.py
 ```
 
@@ -69,7 +69,7 @@ To set the pulse range appropriate for your servo you can change the SERVO_MIN a
 Move to the folder with the code and run the example
 
 ```bash
-cd Python/Servo
+cd Python
 sudo python Servo.py
 ```
 

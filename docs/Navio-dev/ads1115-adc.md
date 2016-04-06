@@ -23,8 +23,8 @@ make
 Move to the folder with the source code and run the example:
 
 ```bash
-cd Python/ADC
-python ads1x15_ex_singleended.py
+cd Python
+python ADC.py
 ```
 
 The program performs measurement of all 4 ADC channels and outputs measured values in millivolts in four columns. When channels inputs are not connected to anything there would probably be a little bit of potential.

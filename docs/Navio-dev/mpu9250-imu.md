@@ -18,7 +18,7 @@ make
 ***Python***  
 Move to the folder with the source code, compile and run the example:
 ```bash
-cd Python/AccelGyroMag
+cd Python
 python AccelGyroMag.py
 ```
 

@@ -18,7 +18,7 @@ make
 Move to the folder with the code and run the example:
 
 ```bash
-cd Python/Barometer
+cd Python
 python Barometer.py
 ```
 

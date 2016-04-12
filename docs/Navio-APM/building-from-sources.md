@@ -3,15 +3,18 @@
 ![](http://www.emlid.com/wp-content/uploads/2014/10/APM.png)
 
 ####Where to get the code
-Working repository for Navio APM port is on <a href="https://github.com/emlid/ardupilot" target="_blank" >our GitHub</a>.
 
-Changes are being pushed in the main ArduPilot repository after some time.
+Navio is supported in the main [APM repository](https://github.com/diydrones/ardupilot).
+
 #### How to build
-You can build APM directly on your Raspberry Pi, it will take approximately 15 minutes.
+APM binary for Navio can be built using two ways:  
 
-For faster build environment it's better to use cross-compiling on Linux PC or virtual machine.
+1) Directly on your Raspberry Pi. It will take approximately 15 minutes.
 
-If you'd like to build on Raspberry Pi skip the next step.
+2) Using a cross-compiler (on Linux PC or virtual machine). This is much faster, but requires one-time setup.
+
+If you'd like to build on Raspberry Pi or use Waf build system (either on Raspberry Pi or Linux PC) skip the next step.
+
 ####Cross-compiler setup on Linux (optional)
 Standard ARM compiler from Ubuntu repositories is not suitable for cross-compiling for Raspberry Pi since it does not support hard float for ARMv6 architecture, instead use compiler provided by Raspberry Pi Foundation that is available <a href="https://github.com/raspberrypi/tools" target="_blank" >here</a>.
 
@@ -37,69 +40,78 @@ export PATH=/opt/tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/b
 
 If you would like to add the compiler to the PATH permanently edit /etc/environment.
 
-####Building APM
+####Building APM  using make-based build system
 These steps are the same both for compiling APM directly on Raspberry Pi and cross-compiling.
 
-Download the APM’s port for Navio:
+Download the APM code and update submodules:
 
 ```bash
-git clone https://github.com/emlid/ardupilot.git
+git clone https://github.com/diydrones/ardupilot.git
+cd ardupilot
+git submodule update --init
 ```
-
-For Navio and Navio+ boards switch to the 'navio' branch:
-
+Navigate to the autopilot’s directory: APMrover, ArduCopter or ArduPlane. For example ArduCopter:
 ```bash
-git checkout navio
+cd ArduCopter
 ```
 
-For Navio Raw switch to the 'navio-raw' branch:
-
+Build for quadcopter:
 ```bash
-git checkout navio-raw
+make navio-quad
 ```
 
-Navigate to the autopilot’s directory, for example rover, run configuration and build it:
-
-```bash
-cd ardupilot/APMrover2
-make configure
-make navio
-```
-Build  for quadcopter:
-
-```bash
-cd ardupilot/ArduCopter
-make configure
-make navio
-```
-
-Build for hexacopter:
-
-```bash
-cd ardupilot/ArduCopter
-make configure
-make navio-hexa
-```
-To build for other frame types replace hexa with one of the following options:
+To build for other frame types replace quad with one of the following options:
 
 ```bash
 quad tri hexa y6 octa octa-quad heli single obc nologging
 ```
 
-Executable file will be placed in /tmp/APMrover2.build directory.
+In the end of compilation binary file with the name ArduCopter.elf will be placed in the same directory.
 
 If you're using cross-compiler transfer the binary to your Raspberry Pi:
 
 ```bash
-rsync -avz /tmp/APMrover2.build/APMrover2.elf pi@192.168.1.3:/home/pi/
+rsync -avz ArduCopter.elf pi@192.168.1.3:/home/pi/
 ```
 
 Where 192.168.1.3 is an IP address of your Raspberry Pi with Navio.
 
-If you are compiling directly on Raspberry copy the binary from tmp directory to your home folder:
+####Building APM using Waf build system
 
+These steps are the same both for compiling APM directly on Raspberry Pi and cross-compiling.
+
+Download the APM code and update submodules:
 ```bash
-cp /tmp/APMrover2.build/APMrover2.elf /home/pi/APMrover2.elf
+git clone https://github.com/diydrones/ardupilot.git
+cd ardupilot
+git submodule update --init
 ```
+Note that Waf should always be called from the ardupilot's root directory.
+
+To keep access to Waf convenient, use the following alias from the root ardupilot directory:
+```bash
+alias waf="$PWD/modules/waf/waf-light"
+```
+Differently from the make-based build, with Waf there's a configure step to choose the board to be used:
+```bash
+waf configure --board=navio
+```
+Now you can build arducopter. For quadrocopter use the following command:
+```bash
+waf --targets bin/arducopter-quad
+```
+To build for other frame types replace quad with one of the following options:
+```bash
+coax heli hexa octa octa-quad single tri y6
+```
+In the end of compilation binary file with the name arducopter-quad will be placed in ardupilot/build/navio/bin/ directory.
+
+If you're using cross-compiler transfer the binary to your Raspberry Pi:
+```bash
+rsync -avz ardupilot/build/navio/bin/arducopter-quad pi@192.168.1.3:/home/pi/
+```
+Where 192.168.1.3 is an IP address of your Raspberry Pi with Navio.
+
+For further information read [ardupilot WAF Build](https://github.com/ArduPilot/ardupilot/blob/master/README-WAF.md).
 
 Instructions how to run APM on Raspberry and to connect GCS to it are available  [here](installation-and-running.md).

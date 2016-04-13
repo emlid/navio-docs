@@ -1,11 +1,13 @@
-####Configuring Raspberry Pi
+#### Downloading configured Raspbian image
 
-Default Raspbian kernel is configured with PREEMPT option and provides worst case latency around single digit milliseconds. Real-time patch with PREEMPT_RT option lowers the worst case latency to tens of microseconds, allowing for better real-time performance useful for autopilots. We have a documentation page dedicated to real-time Linux where you can get more information as well as see the results of performance tests.
+We provide an SD card image of Raspbian for usage in drone and research applications. 
+Please only use this image with Navio as it has been specially configured for it.
 
-We provide an SD card image of Raspbian with fully preemptive real-time Linux kernel. The image is also additionally configured for usage in drone applications. In research purposes you may [use the default Raspbian](http://docs.emlid.com/Navio-dev/using-default-raspbian/) image with additional configuration, but if you’d like to use APM autopilot use only the image we provide in the [downloads](http://docs.emlid.com/Downloads/Real-time-Linux-RPi2/) section.
+[Emlid Raspbian Image for Navio2/Navio+ (emlid-raspbian-20160408)](http://files.emlid.com/images/emlid-raspbian-20160408.img.xz)
 
+Older image (20150401) is available for download [here](http://files.emlid.com/images/emlid-raspberrypi2-raspbian-rt-20150401.img). Please use only if necessary, otherwise use the image above.
 
-####Writing image to SD card
+#### Writing image to SD card
 
 **On Windows:**
 
@@ -16,19 +18,30 @@ We provide an SD card image of Raspbian with fully preemptive real-time Linux ke
 * Click “Write”. The process may take a few minutes.
 
 **On Linux and Mac OS:**
-
-Extract an image.
-
+ 
+Extract an image.  
+For Ubuntu\Linux run:
 ```bash
 unxz emlid-raspbian-20160408.img.xz
 ```
-
+This will result in an uncompressed image.  
 Unmount SD card partitions if they were mounted.
 Run
 
 For Ubuntu\Linux:
 ```bash
 sudo dd bs=1M if=emlid-raspbian-20160408.img of=/dev/mmcblk0
+```
+
+For Mac OS:
+
+* Find the memory card using `diskutil list` command(Try running it with and without the card inserted).
+It will be one of the /dev/diskX instances.
+**Be careful with the number as you might destroy your whole OS X installation.**
+* Unmount the disk with `sudo diskutil unmountDisk /dev/diskX`
+* Write the image with
+```bash
+sudo dd bs=1m if=emlid-raspbian-20160408.img of=/dev/rdiskX
 ```
 
 For Mac OS:

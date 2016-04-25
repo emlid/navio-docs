@@ -68,7 +68,6 @@ Wi-Fi networks can be configured by editing the /boot/wpa_supplicant.conf file l
 ```bash
 network={
   ssid="yourssid"
-  key_mgmt=WPA-PSK
   psk="yourpasskey"
 }
 ```
@@ -86,7 +85,6 @@ By default in our image Raspberry Pi is set up to connect to the following WiFi 
 ```bash
 ssid = “emlidltd”
 psk = “emlidltd”
-key_mgmt = wpa-psk
 ```
 You can rename your WiFi network, find your Raspberry, reconfigure wpa_supplicant and rename the network back.
 Or, you can create a WiFi hotspot on your laptop.

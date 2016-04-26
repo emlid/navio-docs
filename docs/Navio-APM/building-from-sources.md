@@ -1,6 +1,6 @@
 # Building from sources
 
-![](http://www.emlid.com/wp-content/uploads/2014/10/APM.png)
+![](img/APM.png)
 
 ####Where to get the code
 

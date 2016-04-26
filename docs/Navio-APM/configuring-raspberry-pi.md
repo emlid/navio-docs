@@ -1,11 +1,11 @@
 #### Downloading configured Raspbian image
 
-We provide an SD card image of Raspbian for usage in drone and research applications. 
+We provide an SD card image of Raspbian for usage in drone and research applications.
 Please only use this image with Navio as it has been specially configured for it.
 
-[Emlid Raspbian Image for Navio2/Navio+ (emlid-raspbian-20160408)](http://files.emlid.com/images/emlid-raspbian-20160408.img.xz)
+[Emlid Raspbian Image for Navio2/Navio+ (emlid-raspbian-20160408)](https://files.emlid.com/images/emlid-raspbian-20160408.img.xz)
 
-<sub> Older image (20150401) is available for download [here](http://files.emlid.com/images/emlid-raspberrypi2-raspbian-rt-20150401.img). Please use only if necessary, otherwise use the image above. </sub>
+<sub> Older image (20150401) is available for download [here](https://files.emlid.com/images/emlid-raspberrypi2-raspbian-rt-20150401.img). Please use only if necessary, otherwise use the image above. </sub>
 
 #### Writing image to SD card
 
@@ -18,7 +18,7 @@ Please only use this image with Navio as it has been specially configured for it
 * Click “Write”. The process may take a few minutes.
 
 **On Linux and Mac OS:**
- 
+
 Extract an image.  
 For Ubuntu\Linux run:
 ```bash
@@ -115,5 +115,3 @@ nmap -sn 192.168.1.*
 You can use it with a GUI such as Zenmap or Fing application on your phone.
 
 Look for the hostname ”navio”.
-
-

@@ -43,17 +43,6 @@ It will be one of the /dev/diskX instances.
 ```bash
 sudo dd bs=1m if=emlid-raspbian-20160408.img of=/dev/rdiskX
 ```
-
-For Mac OS:
-
-* Find the memory card using `diskutil list` command(Try running it with and without the card inserted).
-It will be one of the /dev/diskX instances.
-**Be careful with the number as you might destroy your whole OS X installation.**
-* Unmount the disk with `sudo diskutil unmountDisk /dev/diskX`
-* Write the image with
-```bash
-sudo dd bs=1m if=emlid-raspbian-20160408.img of=/dev/rdiskX
-```
 Notice the addition of r in the disk path. It shows that that's this device is not buffered and will make the writing procedure much faster.
 The process may take a few minutes, after it’s finished dd will display a message.
 

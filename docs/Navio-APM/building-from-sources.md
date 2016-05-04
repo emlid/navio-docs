@@ -4,7 +4,7 @@
 
 ####Where to get the code
 
-Navio is supported in the main [APM repository](https://github.com/diydrones/ardupilot).
+Navio is supported in the main [APM repository](https://github.com/ArduPilot/ardupilot).
 
 #### How to build
 APM binary for Navio can be built using two ways:  
@@ -46,7 +46,7 @@ These steps are the same both for compiling APM directly on Raspberry Pi and cro
 Download the APM code and update submodules:
 
 ```bash
-git clone https://github.com/diydrones/ardupilot.git
+git clone https://github.com/ArduPilot/ardupilot.git
 cd ardupilot
 git submodule update --init
 ```
@@ -82,7 +82,7 @@ These steps are the same both for compiling APM directly on Raspberry Pi and cro
 
 Download the APM code and update submodules:
 ```bash
-git clone https://github.com/diydrones/ardupilot.git
+git clone https://github.com/ArduPilot/ardupilot.git
 cd ardupilot
 git submodule update --init
 ```

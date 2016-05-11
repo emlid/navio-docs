@@ -101,6 +101,22 @@ Can be ordered on the [Airborne Projects website](https://www.airborneprojects.c
 ![naviopluscasebymauriciocancino1](img/NavioPlus-CaseByMauricioCancino1.jpg)
 ![naviopluscasebymauriciocancino2](img/NavioPlus-CaseByMauricioCancino2.jpg)
 
+### Anti-vibration mount
+
+We have designed an anti-vibration for Navio that can be easily 3D printed. It significantly simplifies mounting and eliminates vibrations. It is suitable both for Navio+ and Navio2.  
+Bottom view:
+![vibronavio](img/vibro-bottom-view.png)
+Anti-vibration with Navio2 mounted on frame:
+![anti-vibration-mount](img/anti-vibration-mount.jpg)
+
+
+STL Files:  
+[Top](https://github.com/emlid/hardware/blob/master/VibroNavio2top_rev_A.STL)  
+[Bottom](https://github.com/emlid/hardware/blob/master/VibroNavio2bot_rev_A.STL)  
+
+You will also need 8 blue vibration damping balls from [Hobbyking](http://www.hobbyking.com/hobbyking/store/__40603__Vibration_Damping_Ball_65g_Bag_of_8_.html)
+![damping-balls](img/damping-balls.jpg)
+
 ###Available GPIO pins
 
 GPIO pins not connected to anything on Navio+:

@@ -30,11 +30,26 @@ What has been added:
 Log in to your Raspberry Pi using SSH or other method, download the deb package with APM binaries using wget and install it. Deb package contains binaries that are compatible with Navio, Navio Raw or Navio+:
 
 ```bash
-wget 'https://files.emlid.com/apm/apm.deb' -O apm.deb
-sudo dpkg -i apm.deb
+pi@navio: ~ wget 'https://files.emlid.com/apm/apm.deb' -O apm.deb
+pi@navio: ~ sudo dpkg -i apm.deb
 ```
 
 If you'd like to build the binary yourself please proceed to the [Building from sources](building-from-sources.md).
+
+<sub>
+If you'd like to use beta you can type these commands
+
+```bash
+pi@navio: ~ sudo apt-get update && sudo apt-get dist-upgrade
+pi@navio: ~ sudo apt-get install apm-navio-beta
+```
+
+</sub>
+
+####Upgrade
+
+If you'd like to upgrade please follow the [Upgrade entry sources](ardupilot-upgrade.md).
+
 ####Running APM
 
 Supported vehicle types are:
@@ -128,7 +143,7 @@ BATT_VOLT_PIN 2
 CTRL+C to kill ArduCopter and run again using:
 
 ```bash
-sudo ArduCopter-quad -A udp:192.168.1.2:14550
+pi@navio: ~ sudo ArduCopter-quad -A udp:192.168.1.2:14550
 ```
 
 You should see voltage and current values. After that it works everytime.

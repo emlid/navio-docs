@@ -26,7 +26,7 @@ List of changes includes:
 
 * Replaced default kernel with PREEMPT_RT kernel 3.18.9-rt5-v7+
 * Enabled non-FIQ USB driver (currently FIQ driver is not compatible with RT-patch on RPi2)
-* Enabled camera, SPI, I2C and set its speed to 1MHz (if you’d like to connect a sensor with lower clock speed, edit the baudrate option in /etc/modprobe.d/i2c.conf)
+* Enabled camera, SPI, I2C and set its speed to 1MHz (if you’d like to connect a sensor with lower clock speed, add dtparam=i2c_baudrate=400000 option in /boot/config.txt)
 * Installed pigpio, screen, socat, python-smbus, python-spidev, cmake, cyclictest
 * Disabled serial console, so /dev/ttyAMA0 UART can be used for radio (to enable back use raspi-config or edit /boot/cmdline.txt), disabled extra ttys
 * Default WiFi network: ssid “emlidltd”, psk “emlidltd”, key_mgmt=WPA-PSK

@@ -30,8 +30,7 @@ What has been added:
 Log in to your Raspberry Pi using SSH or other method, download the deb package with APM binaries using wget and install it. Deb package contains binaries that are compatible with Navio, Navio Raw or Navio+:
 
 ```bash
-pi@navio: ~ wget 'https://files.emlid.com/apm/apm.deb' -O apm.deb
-pi@navio: ~ sudo dpkg -i apm.deb
+pi@navio: ~ sudo apt-get install apm-navio
 ```
 
 If you'd like to build the binary yourself please proceed to the [Building from sources](building-from-sources.md).

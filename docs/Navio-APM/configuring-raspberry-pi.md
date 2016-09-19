@@ -1,11 +1,8 @@
 #### Downloading configured Raspbian image
 
-We provide an SD card image of Raspbian for usage in drone and research applications.
-Please only use this image with Navio as it has been specially configured for it.
+Navio+ requires a preconfigured Raspbian to run. We provide a unified SD card image for Raspberry Pi 2 and 3. The OS is headless, i.e. it comes without GUI as it is not required for drone applications.  
 
-[Emlid Raspbian Image for Navio2/Navio+ (emlid-raspbian-20160408)](https://files.emlid.com/images/emlid-raspbian-20160408.img.xz)
-
-<sub> Older image (20150401) is available for download [here](https://files.emlid.com/images/emlid-raspberrypi2-raspbian-rt-20150401.img). Please use only if necessary, otherwise use the image above. </sub>
+[Emlid Raspbian Image](https://files.emlid.com/images/emlid-raspbian-20160718.img.xz), [(md5)](https://files.emlid.com/images/MD5SUMS)
 
 #### Writing image to SD card
 

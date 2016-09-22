@@ -9,7 +9,7 @@ Navio+ requires a preconfigured Raspbian to run. We provide a unified SD card im
 **On Windows:**
 
 * Extract an image (using 7-Zip or other unpacker).
-* Download and extract [Rufus formatting utility](http://downloads.sourceforge.net/project/portableapps/Rufus%20Portable/RufusPortable_2.11.paf.exe?r=http%3A%2F%2Fportableapps.com%2Fapps%2Futilities%2Frufus-portable&ts=1474446747&use_mirror=kent)
+* Download and extract [Rufus formatting utility](http://downloads.sourceforge.net/project/portableapps/Rufus%20Portable/RufusPortable_2.11.paf.exe?r=http%3A%2F%2Fportableapps.com%2Fapps%2Futilities%2Frufus-portable&ts=1474446747&use_mirror=kent).
 * Run Rufus formatting utility with administrator rights.
 * Select the extracted image file and sd card drive letter.
 * Click “Write”. The process may take a few minutes.

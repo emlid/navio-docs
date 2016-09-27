@@ -112,6 +112,6 @@ rsync -avz ardupilot/build/navio/bin/arducopter-quad pi@192.168.1.3:/home/pi/
 ```
 Where 192.168.1.3 is an IP address of your Raspberry Pi with Navio.
 
-For further information read [ardupilot WAF Build](https://github.com/ArduPilot/ardupilot/blob/master/README-WAF.md).
+For further information read [ardupilot WAF Build](https://github.com/ArduPilot/ardupilot/blob/master/BUILD.md).
 
 Instructions how to run APM on Raspberry and to connect GCS to it are available  [here](installation-and-running.md).

@@ -1,47 +1,17 @@
 #### Downloading configured Raspbian image
 
-Navio+ requires a preconfigured Raspbian to run. We provide a unified SD card image for Raspberry Pi 2 and 3. The OS is headless, i.e. it comes without GUI as it is not required for drone applications.  
+Navio+ requires a preconfigured Raspbian to run. We provide a unified SD card image for Raspberry Pi 2 and 3. The OS is headless, i.e. it comes without GUI as it is not required for drone applications.
 
 [Emlid Raspbian Image](https://files.emlid.com/images/emlid-raspbian-20160718.img.xz), [(md5)](https://files.emlid.com/images/MD5SUMS)
 
 #### Writing image to SD card
 
-**On Windows:**
+* Get the latest Emlid Raspbian Image.
+* Download, extract and run [Etcher](https://etcher.io/) with administrator rights.
+* Select the archive file with image and sd card drive letter.
+* Click “Flash!”. The process may take a few minutes.
 
-* Extract an image (using 7-Zip or other unpacker).
-* Download and extract [Win32DiskImager utility](http://sourceforge.net/projects/win32diskimager/)
-* Run Win32DiskImager utility with administrator rights.
-* Select the extracted image file and sd card drive letter.
-* Click “Write”. The process may take a few minutes.
-
-**On Linux and Mac OS:**
-
-Extract an image.  
-For Ubuntu\Linux run:
-```bash
-unxz emlid-raspbian-20160408.img.xz
-```
-This will result in an uncompressed image.  
-Unmount SD card partitions if they were mounted.
-Run
-
-For Ubuntu\Linux:
-```bash
-sudo dd bs=1M if=emlid-raspbian-20160408.img of=/dev/mmcblk0
-```
-
-For Mac OS:
-
-* Find the memory card using `diskutil list` command(Try running it with and without the card inserted).
-It will be one of the /dev/diskX instances.
-**Be careful with the number as you might destroy your whole OS X installation.**
-* Unmount the disk with `sudo diskutil unmountDisk /dev/diskX`
-* Write the image with
-```bash
-sudo dd bs=1m if=emlid-raspbian-20160408.img of=/dev/rdiskX
-```
-Notice the addition of r in the disk path. It shows that that's this device is not buffered and will make the writing procedure much faster.
-The process may take a few minutes, after it’s finished dd will display a message.
+<iframe  title="Emlid manuals" width="680" height="380" src="https://www.youtube.com/embed/i8_TFYWYt_M" allowfullscreen></iframe>
 
 More detailed instructions are available [here](http://www.raspberrypi.org/documentation/installation/installing-images/).
 

@@ -40,12 +40,3 @@ Known issues:
 Patched and configured source code for Raspberry Pi real-time kernel:
 
 * [github.com/emlid/linux-rt-rpi](https://github.com/emlid/linux-rt-rpi)
-
-SD card image downloads:
-
-* [emlid-raspbian-20160408.img.xz](https://files.emlid.com/images/emlid-raspbian-20160408.img.xz)
-
-
-* You can also download the older [emlid-raspberrypi2-raspbian-rt-20150401.img](https://files.emlid.com/images/emlid-raspberrypi2-raspbian-rt-20150401.img)
-
---

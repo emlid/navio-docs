@@ -24,7 +24,7 @@ pages:
   - 'PPM RC input' : 'Navio-dev/rc-input.md'
   - 'ADC' : 'Navio-dev/ads1115-adc.md'
   - 'FRAM' : 'Navio-dev/mb85r-fram.md'
-  - 'Bus usage' : 'Navio-dev/using-default-raspbian.md'
+  - 'Bus usage' : 'Navio-dev/bus-usage.md'
   - 'Datasheets' : 'Navio-dev/datasheets.md'
 - Community projects:
   - 'Windows IoT': 'Community-projects/Windows-IoT.md'

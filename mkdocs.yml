@@ -11,11 +11,8 @@ pages:
   - 'Configuring Raspberry Pi': 'Navio-APM/configuring-raspberry-pi.md'
   - 'APM installation and running' : 'Navio-APM/installation-and-running.md'
   - 'Ardupilot upgrade' : 'Navio-APM/ardupilot-upgrade.md'
-  - 'Video Streaming': 'Navio-APM/video-streaming.md'
+  - 'Video streaming': 'Navio-APM/video-streaming.md'
   - 'Building from sources': 'Navio-APM/building-from-sources.md'
-- Downloads:
-  - 'Real-time Linux for RPi2' : 'Downloads/Real-time-Linux-RPi2.md'
-  - 'APM binaries': 'Downloads/APM-binaries.md'
 - Navio for developers:
   - 'Navio examples setup': 'Navio-dev/navio-repository-cloning.md'
   - '9DOF IMU': 'Navio-dev/mpu9250-imu.md'
@@ -27,12 +24,8 @@ pages:
   - 'PPM RC input' : 'Navio-dev/rc-input.md'
   - 'ADC' : 'Navio-dev/ads1115-adc.md'
   - 'FRAM' : 'Navio-dev/mb85r-fram.md'
-  - 'Using default Raspbian' : 'Navio-dev/using-default-raspbian.md'
+  - 'Bus usage' : 'Navio-dev/using-default-raspbian.md'
   - 'Datasheets' : 'Navio-dev/datasheets.md'
 - Community projects:
   - 'Windows IoT': 'Community-projects/Windows-IoT.md'
   - 'SoftOSD': 'Community-projects/SoftOSD.md'
-- RTK with NEO6-T:
-  - 'Rtklib base setup' : 'RTKLIB/rtklib-base-setup.md'
-  - 'Rtklib rover setup' : 'RTKLIB/rtklib-rover-setup.md'
-  - 'RTKGPS+' : 'RTKLIB/RTKGPS+.md'

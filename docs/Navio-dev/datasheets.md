@@ -14,5 +14,3 @@
 * [U-blox NEO-M8](https://www.u-blox.com/sites/default/files/NEO-M8_DataSheet_%28UBX-13003366%29.pdf)
 
 * [MB85RC04](http://www.fujitsu.com/downloads/MICRO/fsa/pdf/products/memory/fram/MB85RC04V-DS501-00016-2v0-E.pdf)
-
-* [ANT101 - GPSGLONASS PCB Active Antenna](https://files.emlid.com/ANT101-PCB-Antenna-Datasheet.pdf)

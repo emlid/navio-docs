@@ -18,6 +18,14 @@ The acquired PWM values can be used in an application or transferred to the Navi
 
 Example code is available in our GitHub repository, if you haven't previously downloaded it, visit [Navio examples setup page](navio-repository-cloning/).
 
+The example requires pigpio library. To install it on Raspebrry Pi:
+
+```bash
+sudo apt-get update
+sudo apt-get install pigpio
+```
+Use this library with caution. 
+
 To compile and and run the example navigate to the directory with it, then run make and execute the compiled binary:
 
 ```bash

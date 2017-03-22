@@ -1,31 +1,33 @@
-site_name: Navio+ docs
+site_name: Navio docs
 theme_dir: docstheme
 site_favicon: favicon.ico
 repo_url: https://github.com/emlid/navio-docs
 
 pages:
 - Introduction : 'index.md'
-- Navio APM:
-  - 'Hardware setup Navio+': 'Navio-APM/hardware-setup-navio-plus.md'
-  - 'Hardware setup Navio': 'Navio-APM/hardware-setup-navio.md'
-  - 'Configuring Raspberry Pi': 'Navio-APM/configuring-raspberry-pi.md'
-  - 'APM installation and running' : 'Navio-APM/installation-and-running.md'
-  - 'Ardupilot upgrade' : 'Navio-APM/ardupilot-upgrade.md'
-  - 'Video streaming': 'Navio-APM/video-streaming.md'
-  - 'Building from sources': 'Navio-APM/building-from-sources.md'
+- Navio with ArduPilot:
+  - 'Hardware setup': 'navio+/ardupilot/hardware-setup.md'
+  - 'Raspberry Pi configuration': 'common/navio-ardupilot/configuring-raspberry-pi.md'
+  - 'ArduPilot installation and running' : 'common/navio-ardupilot/installation-and-running.md'
+  - 'Ardupilot upgrade' : 'common/navio-ardupilot/ardupilot-upgrade.md'
+  - 'Video streaming': 'common/navio-ardupilot/video-streaming.md'
+  - 'Building ArduPilot from sources': 'common/navio-ardupilot/building-from-sources.md'
 - Navio for developers:
-  - 'Navio examples setup': 'Navio-dev/navio-repository-cloning.md'
-  - '9DOF IMU': 'Navio-dev/mpu9250-imu.md'
-  - 'AHRS' : 'Navio-dev/AHRS.md'
-  - 'Barometer' : 'Navio-dev/ms5611-barometer.md'
-  - 'GPS' : 'Navio-dev/read-gps-data.md'
-  - 'U-center GPS' : 'Navio-dev/GPS-ucenter.md'
-  - 'Servos and RGB LED' : 'Navio-dev/servo-and-rgb-led.md'
-  - 'PPM RC input' : 'Navio-dev/rc-input.md'
-  - 'ADC' : 'Navio-dev/ads1115-adc.md'
-  - 'FRAM' : 'Navio-dev/mb85r-fram.md'
-  - 'Bus usage' : 'Navio-dev/bus-usage.md'
-  - 'Datasheets' : 'Navio-dev/datasheets.md'
+  - 'PWM output' : 'navio+/dev/pwm-output.md'
+  - 'ADC' : 'navio+/dev/adc.md'
+  - 'RC input' : 'navio+/dev/rc-input.md'
+  - 'FRAM' : 'navio+/dev/fram.md'
+  - 'Datasheets' : 'navio+/dev/datasheets.md'
+  - 'Examples setup': 'common/navio-dev/navio-repository-cloning.md'
+  - '9DOF IMU' : 'common/navio-dev/imu-mpu9250_lsm9ds1.md'
+  - 'AHRS' : 'common/navio-dev/ahrs.md'
+  - 'Barometer' : 'common/navio-dev/barometer.md'
+  - 'GPS' : 'common/navio-dev/gps-ublox.md'
+  - 'GPS via u-center' : 'common/navio-dev/gps-ublox-ucenter.md'
+  - 'RGB LED' : 'common/navio-dev/rgb-led.md'
+  - 'ROS' : 'common/navio-dev/ros.md'
+  - 'Wi-Fi Broadcast' : 'common/navio-dev/wbc.md'
+  - 'Changelogs': 'common/navio-dev/changelogs.md'
 - Community projects:
-  - 'Windows IoT': 'Community-projects/Windows-IoT.md'
-  - 'SoftOSD': 'Community-projects/SoftOSD.md'
+  - 'Windows IoT': 'common/Community-projects/Windows-IoT.md'
+  - 'SoftOSD': 'common/Community-projects/SoftOSD.md'

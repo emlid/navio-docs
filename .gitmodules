@@ -3,4 +3,4 @@
 	url = https://github.com/emlid/docstheme.git
 [submodule "docs/common"]
 	path = docs/common
-	url = git@github.com:emlid/navio-docs-common.git
+	url = https://github.com/emlid/navio-docs-common.git

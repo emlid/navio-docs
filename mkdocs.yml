@@ -33,7 +33,7 @@ pages:
 - Raspberry Pi configuration: 'common/ardupilot/configuring-raspberry-pi.md'
 - ArduPilot:
   - 'ArduPilot installation and running' : 'common/ardupilot/installation-and-running.md'
-  - 'Ardupilot upgrade' : 'common/ardupilot/ardupilot-upgrade.md'
+  - 'Ardupilot upgrade' : 'common/ardupilot/upgrade.md'
   - 'Building ArduPilot from sources': 'common/ardupilot/building-from-sources.md'
 - ROS: 'common/dev/ros.md'
 - Navio for developers:

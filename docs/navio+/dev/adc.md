@@ -4,7 +4,7 @@ ADS1115 is a precision analog-to-digital converter (ADC) with 16 bits of resolu
 
 **ADS1115 example**
 
-If you haven't already done that, download Navio drivers and examples code [here](navio-repository-cloning/).
+If you haven't already done that, download Navio drivers and examples code [here](../../common/dev/navio-repository-cloning/).
 
 In this example ADC continuously measures voltage on all four pins available on the DF13 connector marked "ADC" on Navio. On Navio+ two ADC channels are present in "Power" connector and two on the bottom of the board. Result in mV is printed to console. 
 

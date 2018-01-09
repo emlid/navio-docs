@@ -6,6 +6,6 @@
 [subrepo]
 	remote = git@github.com:emlid/docstheme.git
 	branch = master
-	commit = 2b7bb3ab8e1173ea5ac6f4c92ee29a5280d1c3d1
-	parent = 4ad5caa456468ec8b8f0bba5eedb07bb4d4313b6
+	commit = 543d4c6f4a75fbe43a25a4c14c47a274e349f3c0
+	parent = 21438e8ee5088db21341c4645497d42b0a45e523
 	cmdver = 0.3.1
